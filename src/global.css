@@ -12,32 +12,47 @@ body,
   overflow: hidden;
 }
 
-@media screen and (min-width:750px) {
+header {
+  height: 80px;
+  background-color: cyan;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
   header {
-    height: 80px;
-    background-color: cyan;
+    justify-content: space-between;
+  }
+  header .user-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  }
+  header .user-info .user-avater {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
   }
   main {
     height: calc(100% - 80px);
     background-color: aliceblue;
     overflow: hidden;
   }
+  footer {
+    display: none;
+  }
 }
 
-@media screen and (min-width:375px) and (max-width:750px) {
-  
+@media screen and (min-width: 375px) and (max-width: 750px) {
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width: 375px) {
   header {
-    height: 80px;
-    background-color: cyan;
-    display: flex;
-    align-items: center;
     justify-content: center;
+  }
+  header nav,
+  header .user-info {
+    display: none;
   }
   main {
     height: calc(100% - 160px);
